@@ -1,4 +1,4 @@
-Come at a lot of customers to implement or support SCOM. 
+I come at a lot of customers to implement or support SCOM. 
 Sometimes the same questions or troubles come up.
 
 One of that questions is: “Is it possible to monitor the count of files (with a specific extension) in a share?”
@@ -9,7 +9,7 @@ Therefore I created my own management pack to monitor the file count, independen
 ![Alt text](Images/1.png?raw=true "Registry ")
 
 First of all we need a seed discovery which is targeted to a registry key located on a SCOM agent monitored Windows Server. The value in the registry is located under SOFTWARE\Filecount. The value is “CSV” and it should contain the path to a CSV file. The server will be discovered as a “File Count Watcher Node”
-![alt text](ManagementPacks/File Count MP/Images/1.png )
+![alt text](Images/2.png?raw=true "CSV" )
 Next stop is the csv file itself, for every share to be monitored it should contain a line with a specific syntax shown in the screenshot belowDifferent parameters are added:
 - ID Must be unique per share
 - Share UNC path of the share
