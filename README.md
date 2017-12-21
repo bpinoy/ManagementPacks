@@ -6,8 +6,8 @@ Always test the management packs in a test environment before importing in produ
 
 If you like what I'm doing consider buying me a beer:
 
-Bitcoin address: 3NVhdVDUg3T3gq55JMzAiymBCYspzJH7eS
+**Bitcoin address:** 3NVhdVDUg3T3gq55JMzAiymBCYspzJH7eS
 
-Ripple address: rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh (Destination tag: 4074302783)
+**Ripple address:** rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh (Destination tag: 4074302783)
 
 
