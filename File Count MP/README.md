@@ -15,15 +15,27 @@ Next stop is the csv file itself, for every share to be monitored it should cont
 ![alt text](Images/2.png?raw=true "CSV" )
 
 Different parameters are added:
-- ID Must be unique per share
-- Share UNC path of the share
-- Extension The extension of the files that needs to be counted, leave empty to count all files in the share
-- Count How many files must be present for a critical state
-- Time This is the time in minutes of the maximum file age of file count
-- Recurse 0 = No need to count files in subfolders / 1 = Count also files in subfolders
+- ID: Must be unique per share
+- Share: UNC path of the share
+- Extension: The extension of the files that needs to be counted, leave empty to count all files in the share
+- Count: How many files must be present for a critical state
+- Time: This is the time in minutes of the maximum file age of file count
+- Recurse: 0 = No need to count files in subfolders / 1 = Count also files in subfolders
 
-When the info is filled in, SCOM will discover every line as a “File Count Share”. The properties are used to configure the monitoring.A monitor is also defined based on the properties filled in the csv file, but it’s basically a powershell script with necessary parameters.The core of the script is this command: 
+When the info is filled in, SCOM will discover every line as a “File Count Share”.
+
+![alt text](Images/3.png?raw=true "Objects" )
+
+The properties are used to configure the monitoring.A monitor is also defined based on the properties filled in the csv file, but it’s basically a powershell script with necessary parameters.The core of the script is this command: 
+
 $count  = Get-ChildItem -Recurse $strShare\$strExtension | where{$_.LastWriteTime -le (Get-Date).AddMinutes($strAge)}|Measure-Object |%{$_.Count}
 
-The file count is also gathered as a performance counter so it can be included in reporting or in a Squared Up dashboard for example.The management pack is also configured to use a specific Run As account. This account needs rights on the shares: at least Read-only Share rights and Read-Only NTFS rights.
+The file count is also gathered as a performance counter so it can be included in reporting or in a Squared Up dashboard for example.
+
+![alt text](Images/5.png?raw=true "Perf" )
+
+The management pack is also configured to use a specific Run As account. This account needs rights on the shares: at least Read-only Share rights and Read-Only NTFS rights.
+
+![alt text](Images/4.png?raw=true "User" )
+
 I’ve been able to help some customers already by using this management pack.The first customer where I set this up is a big hospital in Belgium where they use this management pack to monitor shares which are used to store (and process) images and movies made during surgery. The content should be processed from the network share and transferred somewhere else but sometimes the processing hangs and the share is getting full without anyone knowing. Since they have the management pack in place this hasn’t happened anymore.
