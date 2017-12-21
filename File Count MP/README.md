@@ -5,10 +5,11 @@ If you like what I'm doing consider buying me a beer:
 - **Ripple address:** rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh (Destination tag: 4074302783)
 
 _______________________________________________________________________
+
 I come at a lot of customers to implement or support SCOM. 
 Sometimes the same questions or troubles come up.
 
-One of that questions is: “Is it possible to monitor the count of files (with a specific extension) in a share?”
+One of that questions is: *"Is it possible to monitor the count of files (with a specific extension) in a share?”*
 The answer to this question is yes and no. There is a possibility to count files on Windows Servers that have an agent installed using this management pack: http://www.systemcentercentral.com/pack-catalog/file-system-management-pack-2/ but for shares located on non-Windows Servers, let’s say on a SAN for example I haven’t found a solution.
 
 Therefore I created my own management pack to monitor the file count, independent of the location of the file share (Windows Server or not). In this post I describe how the management pack works. WIth the management pack you can count files with a specific extension (or no extension if everything should be counted) in a share (optionally also subfolders included). There is also the ability to add a specific age zo the given scenario is possible: Count if there are more then 20 files in a share (subfolders included) that are older then 10 minutes.
