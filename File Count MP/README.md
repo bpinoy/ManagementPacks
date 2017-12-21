@@ -1,2 +1,2 @@
 
-![alt text](ManagementPacks/File Count MP/Images/1.png )
+![Alt text](ManagementPacks/File Count MP/Images/1.png?raw=true "TEST")
