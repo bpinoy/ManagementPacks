@@ -44,6 +44,6 @@ The file count is also gathered as a performance counter so it can be included i
 
 The management pack is also configured to use a specific Run As account. This account needs rights on the shares: at least Read-only Share rights and Read-Only NTFS rights.
 
-![alt text](Images/4.png?raw=true "User" )
+![alt text](Images/Runas.png?raw=true "User" )
 
 I’ve been able to help some customers already by using this management pack.The first customer where I set this up is a big hospital in Belgium where they use this management pack to monitor shares which are used to store (and process) images and movies made during surgery. The content should be processed from the network share and transferred somewhere else but sometimes the processing hangs and the share is getting full without anyone knowing. Since they have the management pack in place this hasn’t happened anymore.
