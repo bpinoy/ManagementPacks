@@ -36,7 +36,7 @@ When the info is filled in, SCOM will discover every line as a “File Count Sha
 
 The properties are used to configure the monitoring.A monitor is also defined based on the properties filled in the csv file, but it’s basically a powershell script with necessary parameters.The core of the script is this command: 
 
-$count  = Get-ChildItem -Recurse $strShare\$strExtension | where{$_.LastWriteTime -le (Get-Date).AddMinutes($strAge)}|Measure-Object |%{$_.Count}
+$count  = Get-ChildItem -Recurse $strShare\$strExtension | where{$_.LastWriteTime -le (Get-Date).AddMinutes(-$strAge)}|Measure-Object |%{$_.Count}
 
 The file count is also gathered as a performance counter so it can be included in reporting or in a Squared Up dashboard for example.
 
