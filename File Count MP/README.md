@@ -14,7 +14,7 @@ The answer to this question is yes and no. There is a possibility to count files
 
 Therefore I created my own management pack to monitor the file count, independent of the location of the file share (Windows Server or not). In this post I describe how the management pack works. WIth the management pack you can count files with a specific extension (or no extension if everything should be counted) in a share (optionally also subfolders included). There is also the ability to add a specific age zo the given scenario is possible: Count if there are more then 20 files in a share (subfolders included) that are older then 10 minutes.
 
-![Alt text](Images/1.png?raw=true "Registry ")
+![Alt text](Images/6.png?raw=true "Registry ")
 
 First of all we need a seed discovery which is targeted to a registry key located on a SCOM agent monitored Windows Server. The value in the registry is located under SOFTWARE\Filecount. The value is “CSV” and it should contain the path to a CSV file. The server will be discovered as a “File Count Watcher Node”
 
