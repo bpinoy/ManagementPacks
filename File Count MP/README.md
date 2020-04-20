@@ -42,6 +42,10 @@ The file count is also gathered as a performance counter so it can be included i
 
 ![alt text](Images/8.png?raw=true "Perf" )
 
+Example of a SquaredUp dashboard: 
+
+![alt text](Images/7.png?raw=true "Perf" )
+
 The management pack is also configured to use a specific Run As account. This account needs rights on the shares: at least Read-only Share rights and Read-Only NTFS rights.
 
 ![alt text](Images/Runas.png?raw=true "User" )
