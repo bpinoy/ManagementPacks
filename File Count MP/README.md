@@ -1,10 +1,6 @@
 Always test the management packs in a test environment before importing in production!
 
-If you like what I'm doing consider buying me a beer:
-- **Bitcoin address:** 3NVhdVDUg3T3gq55JMzAiymBCYspzJH7eS
-- **Ripple address:** rLHzPsX6oXkzU2qL12kHCH8G8cnZv1rBJh (Destination tag: 4074302783)
-
-_______________________________________________________________________
+______________________________________________________________________
 
 I come at a lot of customers to implement or support SCOM. 
 Sometimes the same questions or troubles come up.
@@ -51,3 +47,5 @@ The management pack is also configured to use a specific Run As account. This ac
 ![alt text](Images/Runas.png?raw=true "User" )
 
 I’ve been able to help some customers already by using this management pack.The first customer where I set this up is a big hospital in Belgium where they use this management pack to monitor shares which are used to store (and process) images and movies made during surgery. The content should be processed from the network share and transferred somewhere else but sometimes the processing hangs and the share is getting full without anyone knowing. Since they have the management pack in place this hasn’t happened anymore.
+
+If you have questions, feedback,... drop me a line at bert@bpitconsulting.be
