@@ -40,7 +40,7 @@ $count  = Get-ChildItem -Recurse $strShare\$strExtension | where{$_.LastWriteTi
 
 The file count is also gathered as a performance counter so it can be included in reporting or in a Squared Up dashboard for example.
 
-![alt text](Images/5.png?raw=true "Perf" )
+![alt text](Images/8.png?raw=true "Perf" )
 
 The management pack is also configured to use a specific Run As account. This account needs rights on the shares: at least Read-only Share rights and Read-Only NTFS rights.
 
