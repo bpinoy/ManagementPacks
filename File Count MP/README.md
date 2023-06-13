@@ -20,6 +20,7 @@ Next stop is the csv file itself, for every share to be monitored it should cont
 
 Different parameters are added:
 - ID: Must be unique per share
+- Name: this represents the name the displayname used in SCOM (this can be different from the share)
 - Share: UNC path of the share
 - Extension: The extension of the files that needs to be counted, leave empty to count all files in the share
 - Count: How many files must be present for a critical state
