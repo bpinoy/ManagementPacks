@@ -16,7 +16,9 @@ First of all we need a seed discovery which is targeted to a registry key locate
 
 Next stop is the csv file itself, for every share to be monitored it should contain a line with a specific syntax shown in the screenshot below
 
-![alt text](Images/2.png?raw=true "CSV" )
+![image](https://github.com/bpinoy/ManagementPacks/assets/32384899/d20c2efd-3d13-418a-b042-e8c4ea506c83)
+
+
 
 Different parameters are added:
 - ID: Must be unique per share
@@ -29,7 +31,8 @@ Different parameters are added:
 
 When the info is filled in, SCOM will discover every line as a “File Count Share”.
 
-![alt text](Images/3.png?raw=true "Objects" )
+![image](https://github.com/bpinoy/ManagementPacks/assets/32384899/aad76ac1-bbe5-4a64-917d-bc2d0b9a8114)
+
 
 The properties are used to configure the monitoring.A monitor is also defined based on the properties filled in the csv file, but it’s basically a powershell script with necessary parameters.The core of the script is this command: 
 
